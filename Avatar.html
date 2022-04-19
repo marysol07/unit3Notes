@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Updated Color Picker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <div class="content">
+        <p> Avatar Profiles.</p>
+        <img src="#">
+        <div class="row">
+            <div class="row">
+                <h3>Background</h3>
+                <input type="color" id="bg" value="#FFFFFF">
+            </div>
+            <div class="row">
+                <h3>Text!</h3>
+                <input type="color" id="txt">
+            </div>
+            <button id="clear">CLEAR</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+        </div>
+        <script>
+            const content = document.querySelector('.content');
+            const bg = document.getElementById('bg');
+            const txt = document.getElementById('txt');
+            const clear = document.getElementById('clear');
+            const picture = document.querySelector('img');
+            const button1 = document.getElementById('1');
+            const button2 = document.getElementById('2');
+            const button3 = document.getElementById('3');
+            const button4 = document.getElementById('4');
+            const button5 = document.getElementById('5');
+            const button6 = document.getElementById('6');
 
+            bg.addEventListener('change', function(e){
+                content.style.backgroundColor = e.target.value;
+            });
+
+            txt.addEventListener('change', function(e){
+                content.style.color=e.target.value;
+            });
+
+            clear.addEventListener('click', function(e){
+                content.style.backgroundColor = 'white';
+                bg.value = '#FFFFFF'
+                cotent.style.color = 'black';
+                txt.value = '#000000'
+            });
+
+            button1.addEventListener('click', function(e){
+                picture.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0sCAvrW1yFi0UYMgTZb113I0SwtW0dpby8Q&usqp=CAU'
+            });
+
+
+            button2.addEventListener('click', function(e){
+                picture.src='https://t3.ftcdn.net/jpg/02/45/28/12/360_F_245281294_OREQo5SCMEOAgPDn9JUzqMJR7VopNU5c.jpg'
+            });
+
+            button3.addEventListener('click', function(e){
+                picture.src='https://cdn5.vectorstock.com/i/1000x1000/20/74/woman-avatar-profile-vector-21372074.jpg'
+            });
+
+            button4.addEventListener('click', function(e){
+                picture.src='https://t4.ftcdn.net/jpg/02/45/28/13/360_F_245281310_8MM6MbrHRvlsViICuhg6Lk1odT3QLBPK.jpg'
+            });
+
+            button5.addEventListener('click', function(e){
+                picture.src='https://static.vecteezy.com/system/resources/thumbnails/003/584/725/small/people-avatars-profile-id-images-cv-head-businessman-women-collection-free-vector.jpg'
+            });
+
+            button6.addEventListener('click', function(e){
+                picture.src='https://www.clipartmax.com/png/small/293-2931307_account-avatar-male-man-person-profile-icon-profile-icons.png'
+            });
+
+        </script>
+    </div>
 </body>
 </html>
